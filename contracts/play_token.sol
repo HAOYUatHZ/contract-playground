@@ -8,10 +8,10 @@ import {
 // import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 // import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-// import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
-contract PlayToken is ERC20 {
+contract PlayToken is ERC20, ReentrancyGuard, Ownable {
     constructor(uint256 initialSupply) public ERC20("PlayToken", "PLY") {
         _mint(msg.sender, initialSupply);
     }
