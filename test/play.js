@@ -25,14 +25,6 @@ describe("play", () => {
   });
 
   it("playing call", async function () {
-    await expect(await acc1.getBalance()).to.equal("9999985272232000000000");
-    await playToken
-      .connect(acc1)
-      .depositETH(acc1addr, { value: "999985767784000000000" });
-    await expect(await acc1.getBalance()).to.equal("8999999304248000000000");
-    await playToken
-      .connect(acc1)
-      .withdrawETH(acc1addr, "999985767784000000000");
-    await expect(await acc1.getBalance()).to.equal("9999984776680000000000");
+  	// TODO:
   });
 });
