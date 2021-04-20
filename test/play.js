@@ -1,9 +1,7 @@
 const { expect } = require("chai");
 
 describe("play", () => {
-
   before(async () => {
-
     const playTokenFactory = await ethers.getContractFactory("PlayToken");
     playToken = await playTokenFactory.deploy(1000);
 
@@ -11,6 +9,5 @@ describe("play", () => {
     // await playToken.initialize();
   });
 
-  it("playing", async function () {
-  });
+  it("playing", async function () {});
 });
